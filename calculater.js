@@ -5,6 +5,8 @@ function storedata(_input){
         inputed_text.innerHTML = '';
     }else if(_input === '='){
         calculating();
+    }else if(_input === 'bck'){
+        inputed_text.innerHTML = inputed_text.innerHTML.slice(0, -1);
     }else{
         inputed_text.innerHTML += `${_input}`;
     }    
@@ -83,8 +85,22 @@ document.querySelector('.js-number-0')
     .addEventListener('click', () => {
         storedata('0');
     });
-
-
+document.querySelector('.js-number-backspace')
+    .addEventListener('click', () => {
+        storedata('bck');
+    });
+document.querySelector('.js-number-dot')
+    .addEventListener('click', () => {
+        storedata('.');
+    });
+document.querySelector('.js-number-right-brace')
+    .addEventListener('click', () => {
+        storedata(')');
+    });    
+document.querySelector('.js-number-left-brace')
+    .addEventListener('click', () => {
+        storedata('(');
+    }); 
 document.body.addEventListener('keydown', (event) => {
     if(event.key === '1'){
         storedata('1');
@@ -118,6 +134,13 @@ document.body.addEventListener('keydown', (event) => {
         storedata('=');
     }else if(event.key === 'c'){
         storedata('c');
-    }
+    }else if(event.key === 'back-space'){
+    storedata('bck');
+    }else if(event.key === '('){
+        storedata('(');
+    }else if(event.key === ')'){
+        storedata(')');
+    }      
+    
 });    
     
