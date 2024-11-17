@@ -19,7 +19,9 @@ button{
     border: none;
     border-radius: 30px;
     cursor: pointer;
-    box-shadow: -5px 1px 20px 1px;
+    box-shadow: 0px 0px 12px  white;
+    border: solid;
+    border-width: 1px;
     
 }
 button:active{
@@ -27,8 +29,7 @@ button:active{
 }
 .all-calculater{
     
-    background-color: gray;
-    
+    background-color: rgb(17, 3, 68);
     height: 500px;
     display: flex;
     flex-direction: column;
@@ -36,20 +37,24 @@ button:active{
     justify-content: center;
     width: 330px;
     margin-top: 40px;
+    box-shadow: 0px 0px 200px rgb(170, 8, 170);
+    border: solid;
+    border-color: rgb(170, 8, 170);
+    border-radius: 5px;
 }
 .result-display{
     font-size: 40px;
-    color: lime;
+    color: rgb(0, 255, 0);
 }
 p{
     background-color: rgb(0, 0, 0);
     width: 270px;
-    height: 100px;
+    height: 80px;
     color: wheat;
     display: flex;
     align-items:end;
     padding-left: 10px;
     font-size: 40px;
     margin: 0px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
